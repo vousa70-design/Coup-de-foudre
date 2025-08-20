@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coup de Foudre — Rencontres simples et vraies</title>
+  <meta name="description" content="Coup de Foudre: faites des rencontres simples et respectueuses. Inscrivez-vous en 1 minute et trouvez des matchs près de chez vous." />
+  <style>
+    :root{
+      --bg:#0f0f14;
+      --card:#15151d;
+      --text:#f4f4f7;
+      --muted:#b9bcc6;
+      --primary:#ff2d55;
+      --ring: rgba(255,45,85,.35);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Arial, sans-serif;line-height:1.55}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{font-weight:700;font-size:22px;color:var(--primary)}
+    nav a{margin-left:16px;color:var(--muted);font-weight:600}
+    nav a:hover{color:var(--text)}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:32px 0}
+    .btn{padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer;background:var(--primary);color:white;box-shadow:0 8px 24px var(--ring);display:inline-block;margin-top:12px}
+    .btn:hover{filter:brightness(1.05)}
+    .hero-card{background:#15151d;border:1px solid #242433;border-radius:20px;padding:20px}
+    .input{width:100%;padding:12px 14px;border-radius:12px;background:#101018;border:1px solid #282838;color:var(--text);margin-bottom:12px}
+    .profiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
+    .profile{background:#12121a;border:1px solid #242433;border-radius:14px;padding:10px;text-align:center}
+    .profile img{width:100%;border-radius:10px}
+    footer{margin-top:40px;padding:32px 0;color:var(--muted);border-top:1px dashed #2a2a33;text-align:center}
+    @media(max-width:768px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">💘 Coup de Foudre</div>
+      <nav>
+        <a href="#inscription">Inscription</a>
+        <a href="#profils">Profils</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Trouvez votre coup de foudre près de chez vous</h1>
+        <p>Rejoignez une communauté de célibataires à la recherche de relations sincères et authentiques.</p>
+        <a href="#inscription" class="btn">💌 S'inscrire</a>
+      </div>
+      <div class="hero-card" id="inscription">
+        <h3>Créer un compte gratuit</h3>
+        <form id="miniForm">
+          <input type="text" class="input" placeholder="Votre prénom" required>
+          <input type="number" class="input" placeholder="Votre âge" required>
+          <input type="text" class="input" placeholder="Votre ville" required>
+          <button type="submit" class="btn" style="width:100%">Commencer</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="profils">
+      <h2>Quelques profils</h2>
+      <div class="profiles">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="">
+          <h4>Sandra, 25</h4><p>Yaoundé</p>
+        </div>
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="">
+          <h4>Marc, 29</h4><p>Douala</p>
+        </div>
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="">
+          <h4>Linda, 27</h4><p>Bafoussam</p>
+        </div>
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="">
+          <h4>Kevin, 30</h4><p>Yaoundé</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:32px">
+      <h2>Contact</h2>
+      <p>Pour toute question, contactez-nous sur WhatsApp :</p>
+      <p><a href="https://wa.me/237600000000" class="btn">📱 Écrire sur WhatsApp</a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Coup de Foudre. Tous droits réservés.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('miniForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert("Merci pour votre inscription 💖");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
